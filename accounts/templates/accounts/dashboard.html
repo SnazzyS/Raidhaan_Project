@@ -1,0 +1,65 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+    {% for order in orders %}
+    {{ order.phone }}
+    {% endfor %}
+
+<br>
+
+<div class="row">
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3 bg-danger" id="total-orders">
+			  	<div class="card-header">
+			  		<h5 class="card-title">Pending Orders</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title"></h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3 bg-warning " id="orders-delivered">
+			  	<div class="card-header">
+			  		<h5 class="card-title">Processing Orders</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title"></h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3 bg-primary" id="orders-pending">
+			  	<div class="card-header">
+			  		<h5 class="card-title">Out For Delivery</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title"></h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="col-md">
+			<div class="card text-center text-white  mb-3 bg-primary" id="orders-pending">
+			  	<div class="card-header">
+			  		<h5 class="card-title">Delivered Orders</h5>
+			  	</div>
+			  	<div class="card-body">
+			    	<h3 class="card-title"></h3>
+			  	</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}
